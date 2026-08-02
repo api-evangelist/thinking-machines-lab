@@ -1,0 +1,36 @@
+# Thinking Machines Lab — Tinker
+
+> Thinking Machines Lab builds Tinker, a cloud training API that gives researchers full control over data, algorithms, and models while the service manages the GPUs. Author training loops locally with four primitives (forward_backward, optim_step, sample, save_state); Tinker runs distributed LoRA fine-tuning (SFT, RL, DPO, distillation) across dense and MoE models from 1B to 1T+ parameters.
+
+## Product
+- Tinker: https://thinkingmachines.ai/tinker/
+- Tinker docs: https://tinker-docs.thinkingmachines.ai/
+- Quickstart: https://tinker-docs.thinkingmachines.ai/cookbook/quickstart/
+- API reference (SDK): https://tinker-docs.thinkingmachines.ai/tinker/api-reference/restclient/
+- Models & Pricing: https://tinker-docs.thinkingmachines.ai/tinker/models/
+- Changelog: https://tinker-docs.thinkingmachines.ai/changelog/
+- Console / Playground: https://tinker.thinkingmachines.ai/
+
+## SDKs
+- tinker (Python, PyPI, Apache-2.0): https://pypi.org/project/tinker/
+- tinker-cookbook (Python, PyPI): https://pypi.org/project/tinker-cookbook/
+
+## Auth
+- OpenID configuration: https://auth.thinkingmachines.ai/.well-known/openid-configuration
+- OAuth authorization server: https://auth.thinkingmachines.ai/.well-known/oauth-authorization-server
+
+## Repos
+- GitHub org: https://github.com/thinking-machines-lab
+- tinker SDK: https://github.com/thinking-machines-lab/tinker
+- tinker-cookbook: https://github.com/thinking-machines-lab/tinker-cookbook
+
+## Company
+- Home: https://thinkingmachines.ai/
+- Blog: https://thinkingmachines.ai/blog/
+- News: https://thinkingmachines.ai/news/
+- Security disclosure: https://thinkingmachines.ai/security/disclosure-policy/
+- security.txt: https://thinkingmachines.ai/.well-known/security.txt
+- Status: https://status.thinkingmachines.ai/
+- Terms: https://thinkingmachines.ai/legal/terms/
+- Privacy: https://thinkingmachines.ai/legal/privacy/
+- Sign up: https://auth.thinkingmachines.ai/sign-up

@@ -1,0 +1,86 @@
+generated: '2026-07-21'
+method: searched
+source: https://tinker-docs.thinkingmachines.ai/tinker/api-reference/exceptions/ + /cookbook/api-reference/exceptions/
+note: >-
+  Tinker exposes errors as typed Python SDK exceptions (not RFC 9457 HTTP problem
+  documents). This catalog lists the documented exception classes an agent/SDK
+  consumer should handle. Grouped by the tinker (client) package and the
+  tinker_cookbook package.
+envelope: python-exception
+error_classes:
+- name: AuthenticationError
+  package: tinker
+  area: auth
+  meaning: OAuth token missing, expired, or invalid when calling the Tinker service.
+- name: TinkerCookbookError
+  package: tinker_cookbook
+  area: base
+  meaning: Base class for all Tinker Cookbook errors.
+- name: ConfigurationError
+  package: tinker_cookbook
+  area: config
+  meaning: Invalid or missing configuration for a training/eval run.
+- name: DataError
+  package: tinker_cookbook
+  area: data
+  meaning: Base data error.
+- name: DataFormatError
+  package: tinker_cookbook
+  area: data
+  meaning: Dataset rows are not in the expected format.
+- name: DataValidationError
+  package: tinker_cookbook
+  area: data
+  meaning: Dataset failed validation checks.
+- name: TrainingError
+  package: tinker_cookbook
+  area: training
+  meaning: A training run failed.
+- name: AllTrajectoriesFailedError
+  package: tinker_cookbook
+  area: rl
+  meaning: Every sampled trajectory in an RL batch failed.
+- name: CheckpointError
+  package: tinker_cookbook
+  area: checkpoint
+  meaning: Failed to save/load a training checkpoint.
+- name: WeightsError
+  package: tinker_cookbook
+  area: weights
+  meaning: Base weights error.
+- name: WeightsDownloadError
+  package: tinker_cookbook
+  area: weights
+  meaning: Failed to download model weights / a LoRA checkpoint.
+- name: WeightsMergeError
+  package: tinker_cookbook
+  area: weights
+  meaning: Failed to merge LoRA weights into the base model.
+- name: WeightsAdapterError
+  package: tinker_cookbook
+  area: weights
+  meaning: LoRA adapter could not be applied.
+- name: RendererError
+  package: tinker_cookbook
+  area: rendering
+  meaning: Chat/prompt renderer failed to build model input.
+- name: EvalError
+  package: tinker_cookbook
+  area: eval
+  meaning: Base evaluation error.
+- name: EvalGradingError
+  package: tinker_cookbook
+  area: eval
+  meaning: An evaluation grader failed.
+- name: EvalTimeoutError
+  package: tinker_cookbook
+  area: eval
+  meaning: An evaluation exceeded its time budget.
+- name: BenchmarkNotFoundError
+  package: tinker_cookbook
+  area: eval
+  meaning: Named benchmark could not be found.
+- name: SandboxError
+  package: tinker_cookbook
+  area: sandbox
+  meaning: Code-execution sandbox failed.

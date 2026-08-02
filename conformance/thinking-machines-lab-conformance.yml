@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: derived
+source: well-known/ discovery documents (OIDC + OAuth AS metadata) + security.txt
+standards:
+- id: oauth2
+  conforms: true
+  evidence: auth.thinkingmachines.ai publishes RFC 8414 authorization-server metadata with authorization/token/introspection endpoints.
+- id: oidc
+  conforms: true
+  evidence: /.well-known/openid-configuration present with issuer, jwks_uri, userinfo_endpoint, RS256 id_token signing.
+- id: rfc8414-oauth-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server returns 200.
+- id: rfc8628-device-authorization-grant
+  conforms: true
+  evidence: device_authorization_endpoint advertised; device_code grant supported.
+- id: rfc7636-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256.
+- id: rfc9116-security-txt
+  conforms: true
+  evidence: /.well-known/security.txt present with Contact + Expires + Encryption.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no published REST OpenAPI; the Tinker interface is a Python SDK with typed exceptions rather than application/problem+json.

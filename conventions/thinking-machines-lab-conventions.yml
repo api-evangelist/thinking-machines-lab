@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: derived
+source: tinker-docs.thinkingmachines.ai + well-known/ + PyPI tinker SDK
+note: >-
+  Tinker is consumed as a Python SDK (the tinker client + tinker-cookbook) that
+  drives a remote cloud training service, rather than a documented public REST
+  surface. Cross-cutting semantics captured from the SDK and docs.
+authentication:
+  style: oauth2-oidc
+  detail: OAuth 2.0 / OIDC via auth.thinkingmachines.ai; SDK manages tokens; device-code grant for CLI/headless, client_credentials for services.
+  ref: authentication/thinking-machines-lab-authentication.yml
+programming_model:
+  style: async-training-primitives
+  primitives: [forward_backward, optim_step, sample, save_state]
+  detail: Author training loops locally; the four low-level functions run on Tinker-managed remote GPU clusters. LoRA-based fine-tuning across dense and MoE models.
+checkpoints:
+  scheme: 'tinker:// URIs identify saved LoRA checkpoints/weights.'
+error_handling:
+  style: typed-exceptions
+  detail: Errors surface as typed Python exceptions (AuthenticationError and the tinker_cookbook error hierarchy) rather than HTTP problem documents.
+  ref: errors/thinking-machines-lab-error-codes.yml
+versioning:
+  scheme: semver
+  detail: SDK/cookbook versioned by PyPI release; single dated changelog.
+  ref: changelog/thinking-machines-lab-changelog.yml
+permissions:
+  detail: Org / team / project / session scoping documented in the Data Model & Permissions guide.
+  ref: data-model/thinking-machines-lab-data-model.yml
+audit:
+  detail: RestClient.get_audit_log() exposes an organization audit log.

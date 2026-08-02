@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://tinker-docs.thinkingmachines.ai/ (Data Model & Permissions guide, 2026-07-16)
+note: >-
+  Derived from Tinker's published Data Model & Permissions guide, which describes
+  how Tinker organizes data and access. Physical/REST id-prefixes are not published,
+  so relationships capture the documented hierarchy only.
+entities:
+- name: organization
+  description: Top-level tenant; owns billing, members, and access policy.
+- name: team
+  description: A group of users within an organization.
+- name: project
+  description: A workspace grouping related training work.
+- name: session
+  description: A working context under a project; groups training runs and sampling.
+- name: training_run
+  description: An individual fine-tuning / training job (LoRA SFT, RL, distillation).
+- name: checkpoint
+  description: A saved model/weights state produced by a training run (tinker:// URI).
+relationships:
+- from: team
+  to: organization
+  type: belongs_to
+- from: project
+  to: organization
+  type: belongs_to
+- from: session
+  to: project
+  type: belongs_to
+- from: training_run
+  to: session
+  type: belongs_to
+- from: checkpoint
+  to: training_run
+  type: belongs_to
+- from: organization
+  to: team
+  type: has_many
+- from: project
+  to: session
+  type: has_many
+- from: session
+  to: training_run
+  type: has_many
+- from: training_run
+  to: checkpoint
+  type: has_many

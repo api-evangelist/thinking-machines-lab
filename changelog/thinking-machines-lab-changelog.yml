@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: https://tinker-docs.thinkingmachines.ai/changelog/
+scheme: semver
+current_version: '0.23.1'
+note: >-
+  A single dated changelog covers the Tinker SDK, the Tinker Cookbook, the Tinker
+  Console, and the docs. SDK/Cookbook entries are dated by PyPI release, Console
+  by launch date, Docs by merge-to-main. Recent window only.
+entries:
+- component: SDK
+  version: '0.23.1'
+  date: '2026-07-18'
+  highlight: Fixed RestClient.get_audit_log() failing when the audit-log response redirected to a signed download URL.
+- component: Docs
+  date: '2026-07-17'
+  highlight: Models & Pricing updated for the July 17 pricing change (prefill, sample, and training rates rose on standard context-length models; cached prefill stays 20%).
+- component: Docs
+  date: '2026-07-16'
+  highlight: New Data Model & Permissions guide covering organizations, teams, projects, sessions, training runs, and checkpoints.
+- component: SDK
+  version: '0.23.0'
+  date: '2026-07-15'
+  highlight: SampleResponse now reports prompt_cache_hit_tokens (prompt tokens billed as prefix-cache hits).
+- component: Cookbook
+  version: '0.5.0'
+  date: '2026-07-15'
+  highlight: Added a Modal inference integration turning a tinker:// LoRA checkpoint into an OpenAI-compatible endpoint.
+- component: Console
+  date: '2026-07-15'
+  highlight: Launched the Playground for chatting with Inkling directly in the console (unbilled for now).
+- component: Console
+  date: '2026-07-08'
+  highlight: Console moved to tinker.thinkingmachines.ai (old tinker-console host now redirects).
+- component: Console
+  date: '2026-07-06'
+  highlight: Added a Session Metrics time-series view to every session page.

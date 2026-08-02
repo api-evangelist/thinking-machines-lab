@@ -1,9 +1,29 @@
 aid: thinking-machines-lab
 name: Thinking Machines Lab
-description: 'Thinking Machines Lab is a company surfaced as a portfolio company of gv and added to the
-  API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Thinking Machines Lab is an AI research company (founded by Mira Murati) whose
+  first product is Tinker — a cloud training API for researchers and developers.
+  Tinker gives you full control over your data, algorithms, and models while it
+  manages the GPU infrastructure: you author training loops locally with four
+  primitives (forward_backward, optim_step, sample, save_state) and Tinker runs
+  distributed LoRA fine-tuning across dense and Mixture-of-Experts models from 1B
+  to 1T+ parameters. It supports SFT, reinforcement learning (GRPO, PPO), DPO, and
+  distillation, shipped as an official Python SDK (tinker) plus the tinker-cookbook
+  of recipes, a web console/playground, and OAuth 2.0 / OIDC authentication.
 url: https://raw.githubusercontent.com/api-evangelist/thinking-machines-lab/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://thinkingmachines.ai/images/apple-touch-icon.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,10 +32,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai
+- Machine Learning
+- LLM
+- Fine Tuning
+- Model Training
+- Developer Tools
+- Reinforcement Learning
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +51,67 @@ maintainers:
 common:
 - type: Website
   url: https://thinkingmachines.ai
+- type: DeveloperPortal
+  url: https://tinker-docs.thinkingmachines.ai/
+- type: Documentation
+  url: https://tinker-docs.thinkingmachines.ai/
+- type: APIReference
+  url: https://tinker-docs.thinkingmachines.ai/tinker/api-reference/restclient/
+- type: GettingStarted
+  url: https://tinker-docs.thinkingmachines.ai/cookbook/quickstart/
+- type: Blog
+  url: https://thinkingmachines.ai/blog/
+- type: GitHubOrganization
+  url: https://github.com/thinking-machines-lab
+- type: Support
+  url: https://github.com/thinking-machines-lab/tinker-feedback
+- type: Pricing
+  url: https://tinker-docs.thinkingmachines.ai/tinker/models/
+- type: SignUp
+  url: https://auth.thinkingmachines.ai/sign-up
+- type: TermsOfService
+  url: https://thinkingmachines.ai/legal/terms/
+- type: PrivacyPolicy
+  url: https://thinkingmachines.ai/legal/privacy/
+- type: StatusPage
+  url: https://status.thinkingmachines.ai
+- type: ChangeLog
+  name: Tinker changelog
+  url: changelog/thinking-machines-lab-changelog.yml
+- type: Deprecation
+  url: https://tinker-docs.thinkingmachines.ai/tinker/models/
+- type: Packages
+  url: packages/thinking-machines-lab-packages.yml
+- type: SDKs
+  url: packages/thinking-machines-lab-packages.yml
+- type: Authentication
+  url: authentication/thinking-machines-lab-authentication.yml
+- type: OAuthScopes
+  url: scopes/thinking-machines-lab-scopes.yml
+- type: WellKnown
+  url: well-known/thinking-machines-lab-well-known.yml
+- type: SecurityTxt
+  url: well-known/thinking-machines-lab-security.txt
+- type: Conformance
+  url: conformance/thinking-machines-lab-conformance.yml
+- type: ErrorCatalog
+  url: errors/thinking-machines-lab-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/thinking-machines-lab-lifecycle.yml
+- type: Conventions
+  url: conventions/thinking-machines-lab-conventions.yml
+- type: DataModel
+  url: data-model/thinking-machines-lab-data-model.yml
+- type: LLMsTxt
+  url: llms/thinking-machines-lab-llms.txt
+- type: DomainSecurity
+  url: security/thinking-machines-lab-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/thinking-machines-lab-vulnerability-disclosure.yml
+- type: Security
+  url: https://thinkingmachines.ai/security/disclosure-policy/
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 16
+  pass: local-v1

@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: searched
+source: https://tinker-docs.thinkingmachines.ai/changelog/ + /tinker/models/ + status.thinkingmachines.ai
+versioning:
+  scheme: semver
+  surface: Python SDK (tinker) + tinker-cookbook, versioned by PyPI release
+  current: '0.23.1'
+  docs: https://tinker-docs.thinkingmachines.ai/changelog/
+deprecation:
+  policy_url: https://tinker-docs.thinkingmachines.ai/tinker/models/
+  notes: >-
+    Model availability and retirements are governed by a published Model
+    Deprecations schedule on the Models & Pricing page; the cookbook ships
+    deprecation helpers (warn_deprecated, make_deprecated_module_getattr).
+status_page: https://status.thinkingmachines.ai

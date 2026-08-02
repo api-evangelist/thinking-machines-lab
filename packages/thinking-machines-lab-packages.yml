@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/tinker/ + https://github.com/thinking-machines-lab
+packages:
+- language: python
+  registry: pypi
+  name: tinker
+  url: https://pypi.org/project/tinker/
+  install: pip install tinker
+  version: 0.23.1
+  license: Apache-2.0
+  official: true
+  description: The official Python SDK for the Tinker API (cloud LLM training / fine-tuning).
+  repository: https://github.com/thinking-machines-lab/tinker
+- language: python
+  registry: pypi
+  name: tinker-cookbook
+  url: https://pypi.org/project/tinker-cookbook/
+  install: pip install tinker-cookbook
+  official: true
+  description: Realistic examples and reusable abstractions for post-training with Tinker (SFT, RL, DPO, distillation).
+  repository: https://github.com/thinking-machines-lab/tinker-cookbook

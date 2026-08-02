@@ -1,0 +1,8 @@
+# Our security address
+Contact: mailto:security-reports@thinkingmachines.ai
+
+# security.txt expiration date
+Expires: 2029-07-13T07:00:00.000Z
+
+# Our OpenPGP key
+Encryption: https://thinkingmachines.ai/.well-known/pgp-key.txt

@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: searched
+source: https://auth.thinkingmachines.ai/.well-known/openid-configuration + oauth-authorization-server
+docs: https://tinker-docs.thinkingmachines.ai/
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - authorizationCode
+  - clientCredentials
+  - deviceCode
+  - refreshToken
+  notes: >-
+    Tinker authenticates through a dedicated OAuth 2.0 / OpenID Connect authorization
+    server at auth.thinkingmachines.ai. The Python SDK obtains and refreshes tokens;
+    the device-code grant supports CLI / headless sign-in and client_credentials
+    supports service (machine-to-machine) access.
+schemes:
+- name: OpenIDConnect
+  type: openIdConnect
+  openIdConnectUrl: https://auth.thinkingmachines.ai/.well-known/openid-configuration
+  issuer: https://auth.thinkingmachines.ai
+  id_token_signing_alg: RS256
+  userinfo_endpoint: https://auth.thinkingmachines.ai/oauth2/userinfo
+  jwks_uri: https://auth.thinkingmachines.ai/oauth2/jwks
+  sources:
+  - well-known/thinking-machines-lab-openid-configuration.json
+- name: OAuth2
+  type: oauth2
+  authorization_endpoint: https://auth.thinkingmachines.ai/oauth2/authorize
+  token_endpoint: https://auth.thinkingmachines.ai/oauth2/token
+  device_authorization_endpoint: https://auth.thinkingmachines.ai/oauth2/device_authorization
+  introspection_endpoint: https://auth.thinkingmachines.ai/oauth2/introspection
+  grant_types:
+  - authorization_code
+  - client_credentials
+  - refresh_token
+  - 'urn:ietf:params:oauth:grant-type:device_code'
+  pkce: S256
+  token_endpoint_auth_methods:
+  - none
+  - client_secret_basic
+  - client_secret_post
+  sources:
+  - well-known/thinking-machines-lab-oauth-authorization-server.json

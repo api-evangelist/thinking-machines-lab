@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of thinkingmachines.ai + auth.thinkingmachines.ai
+hosts:
+- host: https://thinkingmachines.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: thinking-machines-lab-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://auth.thinkingmachines.ai
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: thinking-machines-lab-openid-configuration.json
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: thinking-machines-lab-oauth-authorization-server.json
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://tinker-docs.thinkingmachines.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /llms.txt
+    status: 404
