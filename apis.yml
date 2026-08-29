@@ -11,6 +11,17 @@ description: >-
   distillation, shipped as an official Python SDK (tinker) plus the tinker-cookbook
   of recipes, a web console/playground, and OAuth 2.0 / OIDC authentication.
 url: https://raw.githubusercontent.com/api-evangelist/thinking-machines-lab/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
