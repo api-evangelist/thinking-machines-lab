@@ -47,12 +47,13 @@ modified: '2026-07-21'
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - Fine-Tuning
 - Model Training
 - Developer Tools
 - Reinforcement Learning
+- Foundation Models
 tags_raw:
 - Company
 - Ai
@@ -62,6 +63,8 @@ tags_raw:
 - Model Training
 - Developer Tools
 - Reinforcement Learning
+- Machine-Learning
+- Foundation Models
 apis: []
 maintainers:
 - FN: Kin Lane
