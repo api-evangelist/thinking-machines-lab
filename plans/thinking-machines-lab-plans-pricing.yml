@@ -1,0 +1,97 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/
+sources:
+- https://tinker-docs.thinkingmachines.ai/tinker/models/models_and_pricing/
+- https://tinker-docs.thinkingmachines.ai/tinker/models/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: per-call
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: true
+note: Docs page listing per-million-token prices for 29 fine-tuning/training models (prefill, cached prefill,
+  sample, train) plus beta serverless inference and $0.10/GB/month checkpoint storage. Several models
+  carry a 'Limited-time 50% discount' with both original and discounted prices shown; only a representative
+  subset of models is transcribed here. Prices also published as models.json / serverless.json.
+plan_count: 12
+currency: USD
+plans:
+- name: Checkpoint storage
+  price_text: $0.10 per GB per month
+  price: 0.1
+  currency: USD
+  period: month
+  unit: per GB
+- name: Inkling (64K) — train
+  price_text: $11.22
+  price: 11.22
+  currency: USD
+  period: per-use
+  unit: per million tokens (train; discounted to $5.61)
+- name: Inkling (64K) — prefill
+  price_text: $3.74
+  price: 3.74
+  currency: USD
+  period: per-use
+  unit: per million tokens (prefill; discounted to $1.87, cached $0.374)
+- name: Inkling (64K) — sample
+  price_text: $9.36
+  price: 9.36
+  currency: USD
+  period: per-use
+  unit: per million tokens (sample; discounted to $4.68)
+- name: Qwen3-8B — prefill
+  price_text: $0.195
+  price: 0.195
+  currency: USD
+  period: per-use
+  unit: per million tokens (prefill, cached $0.039)
+- name: Qwen3-8B — sample
+  price_text: $0.60
+  price: 0.6
+  currency: USD
+  period: per-use
+  unit: per million tokens (sample)
+- name: Qwen3-8B — train
+  price_text: $0.44
+  price: 0.44
+  currency: USD
+  period: per-use
+  unit: per million tokens (train)
+- name: GPT-OSS-20B — prefill
+  price_text: $0.18
+  price: 0.18
+  currency: USD
+  period: per-use
+  unit: per million tokens (prefill, cached $0.036)
+- name: Serverless Inference (Beta) — Inkling-Small input
+  price_text: $0.30
+  price: 0.3
+  currency: USD
+  period: per-use
+  unit: per million input tokens (cached $0.06)
+- name: Serverless Inference (Beta) — Inkling-Small output
+  price_text: $1.20
+  price: 1.2
+  currency: USD
+  period: per-use
+  unit: per million output tokens
+- name: Serverless Inference (Beta) — Inkling input
+  price_text: $1.00
+  price: 1.0
+  currency: USD
+  period: per-use
+  unit: per million input tokens (cached $0.17)
+- name: Serverless Inference (Beta) — Inkling output
+  price_text: $4.05
+  price: 4.05
+  currency: USD
+  period: per-use
+  unit: per million output tokens
